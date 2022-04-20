@@ -221,6 +221,6 @@
 // console.log(fee);
 
 // &&の左側がtrueなら右側を返す
-const num = null;
-const fee = num && "金額未設定です";
-console.log(fee);
+// const num = null;
+// const fee = num && "金額未設定です";
+// console.log(fee);
