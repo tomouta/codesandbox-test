@@ -33,8 +33,15 @@ const onClickAdd = () => {
     const reverseButton = document.createElement("button");
     reverseButton.innerText = "戻す";
     reverseButton.addEventListener("click", () => {
-      deleteTarget = reverseButton.parentNode;
+      const deleteTarget = reverseButton.parentNode;
       document.getElementById("complete-list").removeChild(deleteTarget);
+      deleteTarget.textContent = null;
+      const li = document.createElement("li");
+      li.innerText = text;
+      deleteTarget.appendChild(li);
+      deleteTarget.appendChild(completeButton);
+      deleteTarget.appendChild(deleteButton);
+      document.getElementById("incomplete-list").appendChild(deleteTarget);
     });
 
     //divタグの子要素に各要素を設定
